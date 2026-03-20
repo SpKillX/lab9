@@ -3,7 +3,7 @@ import json
 
 def run_go_calculator(numbers):
     proc = subprocess.Popen(
-        ["./calculator"], 
+        ["./calculator.exe"], 
         stdin=subprocess.PIPE, 
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
