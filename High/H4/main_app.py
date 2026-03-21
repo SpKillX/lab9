@@ -5,7 +5,7 @@ def process_orchestrator_data():
     response = requests.get("http://localhost:8082/next-task")
     task = response.json()
     
-    result_hash = rust_crypto.secure_hash(task['payload'])
+    result_hash = rust_crypto.encrypt_data(task['payload'])
     
     return {"id": task['id'], "hash": result_hash}
 

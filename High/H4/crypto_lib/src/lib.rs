@@ -1,13 +1,13 @@
 use pyo3::prelude::*;
 
 #[pyfunction]
-fn secure_hash(data: String) -> PyResult<String> {
-    let hashed = format!("{:x}", md5::compute(data.as_bytes())); 
-    Ok(hashed)
+fn encrypt_data(data: String) -> PyResult<String> {
+    let reversed: String = data.chars().rev().collect();
+    Ok(reversed)
 }
 
 #[pymodule]
-fn rust_crypto(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(secure_hash, m)?)?;
+fn rust_crypto(m: &Bound<'_, PyModule>) -> PyResult<()> {
+    m.add_function(wrap_pyfunction!(encrypt_data, m)?)?;
     Ok(())
 }

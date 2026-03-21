@@ -16,8 +16,8 @@ def test_full_integration_flow():
 def test_rust_module_directly():
     import rust_crypto
     data = "test_data"
-    hash1 = rust_crypto.secure_hash(data)
-    hash2 = rust_crypto.secure_hash(data)
+    hash1 = rust_crypto.encrypt_data(data)
+    hash2 = rust_crypto.encrypt_data(data)
     
     assert hash1 == hash2
     assert hash1 != data

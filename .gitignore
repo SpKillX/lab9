@@ -1,12 +1,3 @@
-*.exe
-*.exe~
-__debug_bin
-bin/
-calculator
-
-target/
-**/*.rs.bk
-
 __pycache__/
 *.py[cod]
 *$py.class
@@ -14,5 +5,16 @@ __pycache__/
 venv/
 .pytest_cache/
 
-.DS_Store
-Thumbs.db
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+target/
+**/*.rs.bk
+
+.vscode/
+.idea/
+*.swp

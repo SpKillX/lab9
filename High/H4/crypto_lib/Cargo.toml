@@ -3,5 +3,9 @@ name = "crypto_lib"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+name = "rust_crypto"
+crate-type = ["cdylib"]
+
 [dependencies]
-md5 = "0.7"
+pyo3 = { version = "0.28", features = ["extension-module"] }
